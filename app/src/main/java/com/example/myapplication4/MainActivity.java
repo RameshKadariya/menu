@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -27,7 +28,14 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.nav).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawerLayout.openDrawer(GravityCompat.START),
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+        ImageView imageView=findViewById(R.id.img);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
 
